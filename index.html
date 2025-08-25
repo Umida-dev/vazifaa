@@ -3,23 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Todo App</title>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <h1>Hello TypeScrip</h1>
-    <form action="">
-      <div>
-        <label for="">Name:</label>
-        <br />
-        <input type="text" name="name" />
-      </div>
-      <div>
-        <label for="">age:</label>
-        <br />
-        <input type="number" name="age" />
-      </div>
-      <button>Add</button>
-    </form>
+    <main class="container">
+      <header class="app-header">
+        <h1 class="app-title">Todo</h1>
+      </header>
+      <section class="todo-app" aria-label="Todo application">
+        <form id="todo-form" class="todo-form" autocomplete="off">
+          <input
+            id="new-todo"
+            class="todo-input"
+            type="text"
+            name="title"
+            placeholder="Add a new task"
+            aria-label="Add a new task"
+          />
+        </form>
+
+        <ul id="todo-list" class="todo-list" role="list"></ul>
+
+        <footer class="controls">
+          <span id="items-left" class="items-left" aria-live="polite">0 items left</span>
+          <div class="filters" role="group" aria-label="Filters">
+            <button type="button" class="filter active" data-filter="all">All</button>
+            <button type="button" class="filter" data-filter="active">Active</button>
+            <button type="button" class="filter" data-filter="completed">Completed</button>
+          </div>
+          <button id="clear-completed" type="button" class="clear-btn">Clear completed</button>
+        </footer>
+      </section>
+    </main>
+
     <script type="module" src="./dist/app.js"></script>
   </body>
 </html>
