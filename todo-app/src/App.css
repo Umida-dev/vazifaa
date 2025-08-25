@@ -1,0 +1,13 @@
+/* Retain file to avoid import errors; Tailwind classes will drive styles. */
+#root { }
+
+.logo { }
+.logo.react { }
+
+@keyframes logo-spin {}
+
+@media (prefers-reduced-motion: no-preference) { }
+
+.card { }
+
+.read-the-docs { }
